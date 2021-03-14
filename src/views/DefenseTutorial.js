@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
         paddingTop: 30,
 
      flex: 1,
-   width: 500,
+   width: '100%',
    height: 300,
    borderWidth: 20,
    borderColor:"#009387",
