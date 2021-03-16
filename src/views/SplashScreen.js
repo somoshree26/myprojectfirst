@@ -1,4 +1,3 @@
-// src/views/Details.js
 import React from 'react';
 import { View, 
     Text, 
@@ -9,8 +8,8 @@ import { View,
     StatusBar,
     Image} from 'react-native';
 
-    import LinearGradient from 'react-native-linear-gradient';
-    import MaterialIcons from 'react-native-vector-icons/MaterialIcons';  
+    
+   // import MaterialIcons from 'react-native-vector-icons/MaterialIcons';  
     import * as Animatable from 'react-native-animatable';
 
 class SplashScreen extends React.Component {
@@ -35,13 +34,9 @@ class SplashScreen extends React.Component {
                 <Text style={styles.text}>Sign in with account</Text>
 
                 <View style={styles.button}> 
-                <TouchableOpacity onPress={()=>navigation.navigate('SignInScreen')}>
-                 
                 
-                    <Text style={styles.textSign}>Get Started</Text>
-                    
                
-            </TouchableOpacity>
+           
             <Button
             color='#009387' 
             buttonStyle={{borderRadius: 20, marginLeft: 0, marginRight: 0, marginBottom: 0}}
