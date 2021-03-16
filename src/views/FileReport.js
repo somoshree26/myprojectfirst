@@ -1,13 +1,16 @@
 import React, {Component} from 'react';  
 import {Platform, StyleSheet, Text, View,ScrollView,TextInput } from 'react-native';  
 import * as Animatable from 'react-native-animatable';
-  
-//type Props = {};  
+
+
+
 class FileReport extends React.Component {   
   render() {  
+   
+
+ 
     return (  
      
-      
       <ScrollView
           style={{
             flexGrow: 0,
@@ -25,13 +28,135 @@ class FileReport extends React.Component {
                 style={styles.footer}>  
       
       <View>
-      <Text> Complainant Name
+        <Text style={{fontSize: 20,backgroundColor: '#DCDCDC',fontWeight: 'bold',}}>  COMPLAINANT</Text>
+      <Text>  Complainant's Name
+      <Text style={{color: 'white'}}>     .</Text>
       <TextInput
-        style={styles.input}
+        style={{height:40  ,width: 300,margin: 12,
+          borderWidth: 1,paddingLeft:50}}
         placeholder="Enter complainant name"
         
       /></Text> 
+      
+      <Text>  Complainant's Address
+      
+      </Text>    <Text style={{color: 'white'}}>                                        .
+      <TextInput
+      multiline
+      numberOfLines={6}
+        style={{height:100  ,width: 300,margin: 12,
+          borderWidth: 1,paddingLeft:50}}
+        placeholder="Enter complainant address"
+        
+      /></Text>
+      <Text> Complainant's Phone no.
+      
+      <TextInput
+          style={{height:40  ,width: 300,margin: 12,
+          borderWidth: 1, paddingLeft:50 }}
+        placeholder="Enter complainant phone number"
+        
+      /></Text> 
+      <Text> Complainant's  Email.
+       <Text style={{color: 'white'}}>     .</Text>
+       <TextInput
+           style={{height:40  ,width: 300,margin: 12,
+           borderWidth: 1, paddingLeft:50 }}
+         placeholder="Enter complainant email address"
+         
+       /></Text> 
       </View> 
+
+
+      <View>
+        <Text style={{fontSize: 20,backgroundColor: '#DCDCDC',fontWeight: 'bold',}}>  VICTIM</Text>
+      <Text>  Victim's Name
+      <Text style={{color: 'white'}}>     .</Text>
+      <TextInput
+        style={{height:40  ,width: 300,margin: 12,
+          borderWidth: 1,paddingLeft:50}}
+        placeholder="Enter victim's name"
+        
+      /></Text> 
+      
+      <Text>  Victim's Address
+      
+      </Text>    <Text style={{color: 'white'}}>                              .
+      <TextInput
+      multiline
+      numberOfLines={6}
+        style={{height:100  ,width: 300,margin: 12,
+          borderWidth: 1,paddingLeft:50}}
+        placeholder="Enter victim's address"
+        
+      /></Text>
+      <Text> Victim's Phone no.
+      
+      <TextInput
+          style={{height:40  ,width: 300,margin: 12,
+          borderWidth: 1, paddingLeft:50 }}
+        placeholder="Enter victim's phone number"
+        
+      /></Text> 
+      <Text> Victim's Email.
+       <Text style={{color: 'white'}}>     .</Text>
+       <TextInput
+           style={{height:40  ,width: 300,margin: 12,
+           borderWidth: 1, paddingLeft:50 }}
+         placeholder="Enter victims email address"
+         
+       /></Text> 
+      </View> 
+       
+
+
+     
+      <View>
+        <Text style={{fontSize: 20,backgroundColor: '#DCDCDC',fontWeight: 'bold',}}> ACCUSED</Text>
+      <Text>  Accused's Name
+      <Text style={{color: 'white'}}>     .</Text>
+      <TextInput
+        style={{height:40  ,width: 300,margin: 12,
+          borderWidth: 1,paddingLeft:50}}
+        placeholder="Enter accused's name"
+        
+      /></Text> 
+      
+      <Text>  Accused's Address
+      
+      </Text>    <Text style={{color: 'white'}}>                                .
+      <TextInput
+      multiline
+      numberOfLines={6}
+        style={{height:100  ,width: 300,margin: 12,
+          borderWidth: 1,paddingLeft:50}}
+        placeholder="Enter accused's address"
+        
+      /></Text>
+      <Text> Accused's Phone no.
+      
+      <TextInput
+          style={{height:40  ,width: 300,margin: 12,
+          borderWidth: 1, paddingLeft:50 }}
+        placeholder="Enter Accused's phone number"
+        
+      /></Text> 
+      <Text> Accused's Email.
+       <Text style={{color: 'white'}}>     .</Text>
+       <TextInput
+           style={{height:40  ,width: 300,margin: 12,
+           borderWidth: 1, paddingLeft:50 }}
+         placeholder="Enter accused email address"
+         
+       /></Text> 
+       </View>
+
+
+
+
+
+
+
       </Animatable.View>
       </View> 
       </ScrollView>
@@ -47,7 +172,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    weight: '500',
+    weight: '50%',
     margin: 12,
     borderWidth: 1,
   },
@@ -93,40 +218,4 @@ footer: {
       fontWeight: 'bold'
   }
 });
-/*
 
-import React, { useState } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
-import NativeForms from "native-forms";
-
-const App = () => {
-  const [hasForm, showForm] = useState(false);
-  const show = () => showForm(true);
-  const hide = () => showForm(false);
-
-  return (
-    <View style={styles.container}>
-      
-
-      <Button title="Show Form" onPress={show} color="#20f" />
-
-      {hasForm && (
-        <NativeForms
-          form="https://my.nativeforms.com/wauVjRU1jZmMTT0oVb41Db"
-          onClose={hide}
-        />
-      )}
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
-
-export default App;*/
