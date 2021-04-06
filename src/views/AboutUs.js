@@ -23,7 +23,7 @@ class AboutUs extends React.Component {
                 animation="bounceIn"
                 duraton="1500"
                 
-                source={require('./assets/logo.png')}
+                source={require('./assets/anuska.png')}
                 style={styles.logo}
                 resizeMode="stretch"
                 />
@@ -31,14 +31,14 @@ class AboutUs extends React.Component {
                 animation="bounceIn"
                 duraton="1500"
                 
-                source={require('./assets/logo.png')}
+                source={require('./assets/somo.png')}
                 style={styles.logo}
                 resizeMode="stretch"
                 />
                 <Animatable.Image 
                 animation="bounceIn"
                 duraton="1500"
-                source={require('./assets/logo.png')}
+                source={require('./assets/ananya.png')}
                 style={styles.logo}
                 resizeMode="stretch"
                 />
@@ -68,9 +68,9 @@ const styles = StyleSheet.create({
       },
       logo: {
          // flex: 1,
-        width: 348,
+        width: 360,
         height: 400,
-        borderWidth: 30,
+        borderWidth: 10,
         borderColor:"white",
         alignContent:'center',
         
