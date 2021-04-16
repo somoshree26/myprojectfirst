@@ -13,10 +13,11 @@ import Bluetooth from '../views/Bluetooth';
 import Location from '../views/Location';
 import Page1 from '../views/Page1';
 import Stories from '../views/Stories';
-
+import profile from '../views/profile';
 
 const AppNavigator = createStackNavigator(
     {
+        
         Home: {
             screen: HomeScreen,
             navigationOptions: { title: 'Welcome to Grab',
@@ -55,6 +56,12 @@ const AppNavigator = createStackNavigator(
         
         }
         },
+        profile: {
+            screen: profile,
+            navigationOptions: { title: 'Profile'
+        
+        }
+        },
         FileReport: {
             screen: FileReport,
             navigationOptions: { title: 'File Report'
@@ -63,7 +70,7 @@ const AppNavigator = createStackNavigator(
         },
         Page1: {
             screen: Page1,
-            navigationOptions: { title: 'Page1'
+            navigationOptions: { title: 'Home'
         
         }
         },
@@ -91,9 +98,9 @@ const AppNavigator = createStackNavigator(
         
         }
         },
-        Location: {
+        Locations: {
             screen: Location,
-            navigationOptions: { title: 'MyLocation'
+            navigationOptions: { title: 'Hotspots'
         
         }
         },
