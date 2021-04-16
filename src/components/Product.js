@@ -9,8 +9,8 @@ import Home from '../views/Home';
 class Product extends React.Component {
     render() {
       return (
-        <Card image={{uri: 'https://vader-prod.s3.amazonaws.com/1543958419-810KAtkwn6L.jpg'}}>
-            
+        <Card >
+           
             <Text style={{marginBottom: 10, marginTop: 20 }} h2>
            shoe
             </Text>
