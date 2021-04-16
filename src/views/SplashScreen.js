@@ -1,3 +1,4 @@
+// src/views/Details.js
 import React from 'react';
 import { View, 
     Text, 
@@ -104,3 +105,4 @@ const styles = StyleSheet.create({
     }
   });
 
+  

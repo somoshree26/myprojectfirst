@@ -121,20 +121,7 @@ class Home extends React.Component {
             onPress={() => this.props.navigation.navigate('Details')} />
              
 
-                <Animatable.Image 
-                animation="bounceIn"
-                duraton="1500"
-                
-                source={require('./assets/dal.png')}
-                style={styles.logo}
-                resizeMode="stretch"
-                />     
-                <Button
-            color='green' 
-            buttonStyle={{borderRadius: 10,  position: 'absolute',bottom:0,
-            left:0,width: 20}}
-            title='View more'
-            onPress={() => this.props.navigation.navigate('Details')} />
+               
             
             <Animatable.Image 
                 animation="bounceIn"
@@ -181,7 +168,7 @@ const styles = StyleSheet.create({
        flex: 1,
      width: '100%',
      height: 300,
-     borderWidth: 20,
+     borderWidth: 10,
      borderColor:"red",
      alignContent:'center',
      borderRadius: 50

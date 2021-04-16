@@ -10,28 +10,34 @@ import Bluetooth from '../views/Bluetooth';
 import Location from '../views/Location';
 import Page1 from '../views/Page1';
 import Stories from '../views/Stories';
-
+import profile from '../views/profile';
+import SplashScreen from './SplashScreen';
+import SignInScreen from './SignInScreen';
 
 
 const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    
+   
     <NavigationContainer>
     
-      <Drawer.Navigator initialRouteName="AboutUs">
+      <Drawer.Navigator initialRouteName="Page1">
       
-        <Drawer.Screen name="Page1" component={Page1} />
+        <Drawer.Screen name="Home" component={Page1} />
+        <Drawer.Screen name="My Profile" component={profile} />
         <Drawer.Screen name="FileReport" component={FileReport} />
         <Drawer.Screen name="Helpline" component={Helpline} />
         <Drawer.Screen name="DefenseTutorial" component={DefenseTutorial} />
-        <Drawer.Screen name="Bluetooth" component={Bluetooth} />
-        <Drawer.Screen name="Location" component={Location} />
+        <Drawer.Screen name="Share Location" component={Bluetooth} />
+        <Drawer.Screen name="Hotspots" component={Location} />
         <Drawer.Screen name="Stories" component={Stories} />
         <Drawer.Screen name="AboutUs" component={AboutUs} />
+        <Drawer.Screen name="Log Out" component={SignInScreen} />
+    
       </Drawer.Navigator>
-     
+   
     </NavigationContainer>
+      
   );
 }

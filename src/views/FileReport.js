@@ -1,14 +1,26 @@
 import React, {Component} from 'react';  
-import {Platform, StyleSheet, Text, View,ScrollView,TextInput } from 'react-native';  
+import {Platform, StyleSheet, Text, View,ScrollView,TextInput,Button,TouchableOpacity } from 'react-native';  
 import * as Animatable from 'react-native-animatable';
+import { Picker } from 'react-native-picker-dropdown' 
 
 
 
-class FileReport extends React.Component {   
-  render() {  
-   
+export default class FileReport extends Component {   
+  constructor(props){
+    super(props);
+    this.state = { language: 'js'  }
+    this.onValueChange = this.handleValueChange.bind(this)
+    this.onValueChange1 = this.handleValueChange1.bind(this)
+  }
 
- 
+  handleValueChange(language) {
+    this.setState({ language })
+  }
+  handleValueChange1(language) {
+    this.setState1({ language })
+  }
+
+  render() {
     return (  
      
       <ScrollView
@@ -29,18 +41,18 @@ class FileReport extends React.Component {
       
       <View>
         <Text style={{fontSize: 20,backgroundColor: '#DCDCDC',fontWeight: 'bold',}}>  COMPLAINANT</Text>
-      <Text>  Complainant's Name
-      <Text style={{color: 'white'}}>     .</Text>
-      <TextInput
+      <Text>   Complainant's Name
+      
+     </Text> 
+     <TextInput
         style={{height:40  ,width: 300,margin: 12,
           borderWidth: 1,paddingLeft:50}}
         placeholder="Enter complainant name"
         
-      /></Text> 
-      
+      />
       <Text>  Complainant's Address
       
-      </Text>    <Text style={{color: 'white'}}>                                        .
+      </Text>    
       <TextInput
       multiline
       numberOfLines={6}
@@ -48,40 +60,57 @@ class FileReport extends React.Component {
           borderWidth: 1,paddingLeft:50}}
         placeholder="Enter complainant address"
         
-      /></Text>
-      <Text> Complainant's Phone no.
+      />
+      <Text> Complainant's Phone no.</Text> 
       
       <TextInput
           style={{height:40  ,width: 300,margin: 12,
           borderWidth: 1, paddingLeft:50 }}
         placeholder="Enter complainant phone number"
         
-      /></Text> 
-      <Text> Complainant's  Email.
-       <Text style={{color: 'white'}}>     .</Text>
+      />
+      <Text> Complainant's  Email.</Text> 
+      
        <TextInput
            style={{height:40  ,width: 300,margin: 12,
            borderWidth: 1, paddingLeft:50 }}
          placeholder="Enter complainant email address"
          
-       /></Text> 
+       />
+
+      
       </View> 
 
-
       <View>
-        <Text style={{fontSize: 20,backgroundColor: '#DCDCDC',fontWeight: 'bold',}}>  VICTIM</Text>
+      <Text style={{fontSize: 20,backgroundColor: '#DCDCDC',fontWeight: 'bold',}}>  VICTIM</Text>
+      <Text>  Is the complainant the victim?
+      </Text>
+      <Picker
+          selectedValue={this.state.language}
+          onValueChange={this.onValueChange}
+          mode="dialog"
+          
+        >
+          <Picker.Item label="YES" value="YES" />
+          <Picker.Item label="NO" value="NO" />
+          
+        </Picker>
+     
+        
       <Text>  Victim's Name
-      <Text style={{color: 'white'}}>     .</Text>
+      </Text> 
       <TextInput
         style={{height:40  ,width: 300,margin: 12,
           borderWidth: 1,paddingLeft:50}}
         placeholder="Enter victim's name"
         
-      /></Text> 
+      />
       
       <Text>  Victim's Address
       
-      </Text>    <Text style={{color: 'white'}}>                              .
+      </Text>  
+    
+       
       <TextInput
       multiline
       numberOfLines={6}
@@ -89,42 +118,56 @@ class FileReport extends React.Component {
           borderWidth: 1,paddingLeft:50}}
         placeholder="Enter victim's address"
         
-      /></Text>
+      />
       <Text> Victim's Phone no.
-      
+      </Text> 
       <TextInput
           style={{height:40  ,width: 300,margin: 12,
           borderWidth: 1, paddingLeft:50 }}
         placeholder="Enter victim's phone number"
         
-      /></Text> 
+      />
       <Text> Victim's Email.
-       <Text style={{color: 'white'}}>     .</Text>
+      </Text> 
        <TextInput
            style={{height:40  ,width: 300,margin: 12,
            borderWidth: 1, paddingLeft:50 }}
          placeholder="Enter victims email address"
          
-       /></Text> 
+       />
       </View> 
        
-
-
-     
       <View>
         <Text style={{fontSize: 20,backgroundColor: '#DCDCDC',fontWeight: 'bold',}}> ACCUSED</Text>
+        <Text>  Is the victim related to accused?
+      </Text>
+      <Picker
+          selectedValue={this.state.language}
+          onValueChange={this.onValueChange}
+          mode="dialog"
+          
+        >
+          <Picker.Item label="NOT RELATED" value="NOT REL" />
+          <Picker.Item label="FAMILY MEMBER" value="FAMILY" />
+          <Picker.Item label="FRIEND" value="FRIEND" />
+          <Picker.Item label="COWORKER" value="COWORKER" />
+          <Picker.Item label="DISTANT RELATIVE" value="DISTANT RELATIVE" />
+          
+        </Picker>
       <Text>  Accused's Name
-      <Text style={{color: 'white'}}>     .</Text>
+      </Text>
       <TextInput
         style={{height:40  ,width: 300,margin: 12,
           borderWidth: 1,paddingLeft:50}}
         placeholder="Enter accused's name"
         
-      /></Text> 
+      />
       
+
+
       <Text>  Accused's Address
       
-      </Text>    <Text style={{color: 'white'}}>                                .
+      </Text>   
       <TextInput
       multiline
       numberOfLines={6}
@@ -132,28 +175,43 @@ class FileReport extends React.Component {
           borderWidth: 1,paddingLeft:50}}
         placeholder="Enter accused's address"
         
-      /></Text>
-      <Text> Accused's Phone no.
+      />
+      <Text> Accused's Phone no.</Text> 
       
       <TextInput
           style={{height:40  ,width: 300,margin: 12,
           borderWidth: 1, paddingLeft:50 }}
         placeholder="Enter Accused's phone number"
         
-      /></Text> 
-      <Text> Accused's Email.
-       <Text style={{color: 'white'}}>     .</Text>
+      />
+      <Text> Accused's Email.</Text> 
+      
        <TextInput
            style={{height:40  ,width: 300,margin: 12,
            borderWidth: 1, paddingLeft:50 }}
          placeholder="Enter accused email address"
          
-       /></Text> 
+       />
        </View>
+       <Text style={{fontSize: 20,backgroundColor: '#DCDCDC',fontWeight: 'bold',}}> NEEDFUL INFORMATION</Text>
+
+<Text style={{fontSize: 20, color:'white'}}> .</Text>
+      
+<TextInput
+      multiline
+      numberOfLines={6}
+        style={{height:100  ,width: 300,margin: 12,
+          borderWidth: 1,paddingLeft:50}}
+        placeholder="enter other details if any"
+        
+      />
 
 
-
-
+<Button
+            color='#009387' 
+            buttonStyle={{borderRadius: 20, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+            title='  Submit  '
+            onPress={() => this.props.navigation.navigate('Home')} />
 
 
 
@@ -163,7 +221,7 @@ class FileReport extends React.Component {
     );  
   }  
 }  
-export default FileReport;
+
 
 const styles = StyleSheet.create({
   container: {
@@ -172,7 +230,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    weight: '50%',
+    
     margin: 12,
     borderWidth: 1,
   },
@@ -218,4 +276,40 @@ footer: {
       fontWeight: 'bold'
   }
 });
+/*
 
+import React, { useState } from "react";
+import { Button, StyleSheet, Text, View } from "react-native";
+import NativeForms from "native-forms";
+
+const App = () => {
+  const [hasForm, showForm] = useState(false);
+  const show = () => showForm(true);
+  const hide = () => showForm(false);
+
+  return (
+    <View style={styles.container}>
+      
+
+      <Button title="Show Form" onPress={show} color="#20f" />
+
+      {hasForm && (
+        <NativeForms
+          form="https://my.nativeforms.com/wauVjRU1jZmMTT0oVb41Db"
+          onClose={hide}
+        />
+      )}
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});
+
+export default App;*/
