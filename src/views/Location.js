@@ -5,7 +5,7 @@ import {StyleSheet, Text ,Platform, Image} from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import * as Locations from 'expo-location';
 
-const Location = () => {
+const CustomHotspot = () => {
   const [region, setRegion] = useState({
     latitude: 22.6101002,
     longitude: 88.3841701,
@@ -76,4 +76,4 @@ const Location = () => {
   );
 };
 
-export default Location;
+export default CustomHotspot;
